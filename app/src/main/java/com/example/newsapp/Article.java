@@ -11,7 +11,7 @@ public class Article {
 
     @PrimaryKey(autoGenerate = true)
     private Integer id;
-    
+
     @SerializedName("author")
     private String mAuthor;
     @SerializedName("content")
