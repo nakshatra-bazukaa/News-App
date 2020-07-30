@@ -1,5 +1,5 @@
 
-package com.example.newsapp;
+package com.example.newsapp.models;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
