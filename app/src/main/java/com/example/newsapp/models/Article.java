@@ -1,10 +1,12 @@
 
 package com.example.newsapp.models;
 
+import androidx.annotation.Nullable;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 import com.google.gson.annotations.SerializedName;
+
 @Entity( tableName = "articles")
 
 public class Article {
@@ -93,4 +95,15 @@ public class Article {
         mUrlToImage = urlToImage;
     }
 
+    @Override
+    public boolean equals(@Nullable Object obj) {
+        if(this == obj)
+            return true;
+
+        if(obj == null && obj.getClass() != this.getClass())
+            return false;
+
+        Article article = (Article)obj;
+        return (this.mAuthor == article.mAuthor && this.mContent == article.mContent && this.mDescription == article.mDescription && this.mPublishedAt == article.mPublishedAt && this.mSource == article.mSource && this.mTitle == article.mTitle && this.mUrl == article.mUrl && this.mUrlToImage == article.mUrlToImage);
+    }
 }
