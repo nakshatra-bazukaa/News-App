@@ -11,6 +11,7 @@ import com.example.newsapp.models.Article;
 
 @Database(entities = {Article.class}, version = 1)
 @TypeConverters(Converters.class)
+
 public abstract class ArticleDatabase extends RoomDatabase {
     private static ArticleDatabase articleDatabaseInstance;
 
